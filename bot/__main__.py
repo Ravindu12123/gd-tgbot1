@@ -8,14 +8,6 @@ from bot import (
   DOWNLOAD_DIRECTORY
   )
 
-logging.basicConfig(
-    level=logging.DEBUG,
-    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
-)
-LOGGER = logging.getLogger(__name__)
-logging.getLogger("pyrogram").setLevel(logging.WARNING)
-
-LOGGER.info(APP_ID,API_HASH,BOT_TOKEN)
 if __name__ == "__main__":
     if not os.path.isdir(DOWNLOAD_DIRECTORY):
         os.makedirs(DOWNLOAD_DIRECTORY)
@@ -31,6 +23,5 @@ if __name__ == "__main__":
         parse_mode="markdown",
         workdir=DOWNLOAD_DIRECTORY
     )
-    LOGGER.info('Starting Bot !')
+    
     app.run()
-    LOGGER.info('Bot Stopped !')
