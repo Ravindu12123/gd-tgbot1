@@ -1,10 +1,12 @@
+import os
+
 class config:
-    BOT_TOKEN = ""
-    APP_ID = ""
-    API_HASH = ""
+    BOT_TOKEN = os.getenv("tk")
+    APP_ID = os.getenv("")
+    API_HASH = os.getenv("")
     DATABASE_URL = ""
-    SUDO_USERS = "" # Sepearted by space.
-    SUPPORT_CHAT_LINK = ""
+    SUDO_USERS = os.getenv("") # Sepearted by space.
+    SUPPORT_CHAT_LINK = os.getenv("")
     DOWNLOAD_DIRECTORY = "./downloads/"
 
 
